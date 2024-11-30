@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="699.0" text="Inventario de Activos" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examenfinal.ActivoController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="139.0" layoutY="34.0" text="ID" />
+            <Label layoutX="106.0" layoutY="65.0" text="Tipo de Activo" />
+            <Label layoutX="129.0" layoutY="99.0" text="Marca" />
+            <Label layoutX="125.0" layoutY="138.0" text="Modelo" />
+            <Label layoutX="132.0" layoutY="171.0" text="Serial" />
+            <Label layoutX="113.0" layoutY="207.0" text="Responsable" />
+            <TextField fx:id="tfID" layoutX="335.0" layoutY="30.0" onAction="#OnClickEscribirID" />
+            <TextField fx:id="tfMarca" layoutX="335.0" layoutY="95.0" onAction="#OnClickEscribirMarca" />
+            <TextField fx:id="tfModelo" layoutX="335.0" layoutY="134.0" onAction="#OnClickEscribirModelo" />
+            <TextField fx:id="tfSerial" layoutX="335.0" layoutY="167.0" onAction="#OnClickEscribirSerial" />
+            <TextField fx:id="tfResponsable" layoutX="335.0" layoutY="203.0" onAction="#OnClickEscribirResponsable" />
+            <ComboBox fx:id="cboxTipoActivo" layoutX="335.0" layoutY="61.0" onAction="#OnClickSeleccionarActivo" prefWidth="150.0" />
+            <Button fx:id="btnLimpiar" layoutX="26.0" layoutY="255.0" mnemonicParsing="false" onAction="#OnClickLimpiar" text="Limpiar" />
+            <Button fx:id="btnAlmacenar" layoutX="599.0" layoutY="255.0" mnemonicParsing="false" onAction="#OnClickAlmacenar" text="Almacenar" />
+            <TableView fx:id="TablaActivo" layoutX="-1.0" layoutY="320.0" prefHeight="215.0" prefWidth="699.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colTipo" prefWidth="110.0" text="Tipo de Activo" />
+                  <TableColumn fx:id="colMarca" prefWidth="106.0" text="Marca" />
+                  <TableColumn fx:id="colModelo" prefWidth="116.0" text="Modelo" />
+                  <TableColumn fx:id="colSerial" prefWidth="132.0" text="Serial" />
+                  <TableColumn fx:id="colResponsable" prefWidth="159.0" text="Responsable" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </content>
+</TitledPane>
